@@ -1,0 +1,35 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="white" opacity="0"/>
+      <!-- Body -->
+      <path d="M100,50 
+               C130,75 
+                120,125 
+                100,150" 
+            fill="#ffd6cc" stroke="#ffb399" stroke-width="1"/>
+      <path d="M100,50 
+               C70,75 
+                80,125 
+                100,150" 
+            fill="#ffd6cc" stroke="#ffb399" stroke-width="1"/>
+            
+      <!-- Head -->
+      <circle cx="100" cy="50" r="30" fill="#ffd6cc" stroke="#ffb399" stroke-width="1"/>
+      
+      <!-- Arms and legs (after week 12) -->
+      
+        <path d="M80,75 
+                 L70,100" 
+              stroke="#ffd6cc" stroke-width="15" stroke-linecap="round"/>
+        <path d="M120,75 
+                 L130,100" 
+              stroke="#ffd6cc" stroke-width="15" stroke-linecap="round"/>
+        <path d="M85,125 
+                 L80,150" 
+              stroke="#ffd6cc" stroke-width="15" stroke-linecap="round"/>
+        <path d="M115,125 
+                 L120,150" 
+              stroke="#ffd6cc" stroke-width="15" stroke-linecap="round"/>
+      
+      
+      <text x="100" y="180" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Week 14</text>
+    </svg>

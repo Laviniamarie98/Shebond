@@ -1,0 +1,244 @@
+.ctaSection {
+  background-color: #ae492f;
+  padding: 6rem 2rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.heartIconTop {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 2rem;
+}
+
+.ctaContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.ctaContent.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaText {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heartIcon {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.getStartedButton {
+  background-color: #fff;
+  color: #ae492f;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.getStartedButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.learnMoreButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.learnMoreButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: left;
+}
+
+.stat h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.stat p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.ctaImageWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.ctaImage {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.floatingBadge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #ae492f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.topBadge {
+  top: 1rem;
+  right: -1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.bottomBadge {
+  bottom: 1rem;
+  left: -1rem;
+  animation: float 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .ctaContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .ctaImageWrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .getStartedButton,
+  .learnMoreButton {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .floatingBadge {
+    display: none;
+  }
+} 

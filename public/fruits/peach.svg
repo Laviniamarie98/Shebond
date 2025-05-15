@@ -1,0 +1,8 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="white" opacity="0"/>
+  
+      <circle cx="100" cy="100" r="40" fill="#ffcba4"/>
+      <path d="M100,60 Q110,50 120,60" stroke="#568203" stroke-width="3" fill="none"/>
+      <path d="M80,100 Q100,120 120,100" stroke="#ff9966" stroke-width="1" fill="none"/>
+      <text x="100" y="160" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Peach</text>
+    </svg>

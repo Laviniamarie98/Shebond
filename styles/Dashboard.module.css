@@ -1,0 +1,285 @@
+.dashboardContainer {
+  min-height: 100vh;
+  background-color: #f3e5d7;
+  color: #6d3914;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ae492f;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+  height: 32px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #6d3914;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.navLink.active {
+  color: #ae492f;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ae492f;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  color: #6d3914;
+}
+
+.signOutButton {
+  background-color: #ae492f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mainContent {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcomeHeading {
+  color: #6d3914;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+  color: #ae492f;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.currentWeekLabel {
+  color: #6d3914;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.weekNumber {
+  color: #ae492f;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.infoLabel {
+  color: #6d3914;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.infoValue {
+  color: #6d3914;
+  margin-bottom: 1.5rem;
+}
+
+.updateButton {
+  display: inline-flex;
+  align-items: center;
+  color: #ae492f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.updateButton svg {
+  margin-left: 0.25rem;
+}
+
+.emptyState {
+  color: #6d3914;
+  margin-bottom: 1.5rem;
+}
+
+.actionButton {
+  background-color: #e75a82;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.insightsDescription {
+  color: #6d3914;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.generateButton {
+  background-color: #8a4fff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  color: #8a4fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.viewButton svg {
+  margin-left: 0.5rem;
+}
+
+.browseButton {
+  background-color: #8a4fff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.milestoneProgressContainer {
+  margin-bottom: 1.5rem;
+}
+
+.milestoneProgressBar {
+  height: 8px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.milestoneProgressFill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.milestoneProgressText {
+  display: flex;
+  align-items: center;
+  color: #6d3914;
+  font-size: 0.9rem;
+}
+
+.checkIcon {
+  color: #4CAF50;
+  margin-right: 8px;
+}
+
+.recentMilestone {
+  background-color: #f9f5f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.recentMilestoneIcon {
+  background-color: #FFD700;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.recentMilestoneLabel {
+  font-size: 0.85rem;
+  color: #ae492f;
+  margin-bottom: 0.25rem;
+}
+
+.recentMilestoneTitle {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.recentMilestoneDate {
+  font-size: 0.85rem;
+  color: #6d3914;
+}
+
+.dueDate {
+  color: #6d3914;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav {
+    display: none;
+  }
+} 
