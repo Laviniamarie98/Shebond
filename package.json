@@ -13,7 +13,6 @@
     "@headlessui/react": "^2.2.0",
     "@supabase/supabase-js": "^2.49.1",
     "@tailwindcss/typography": "^0.5.16",
-    "canvas": "^2.11.2",
     "chart.js": "^4.4.0",
     "next": "14.0.3",
     "react": "^18",
