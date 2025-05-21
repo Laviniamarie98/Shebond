@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { FaPlus, FaCalendarAlt, FaWeight, FaSmile, FaNotesMedical, FaRuler, FaChild, FaBaby, FaArrowLeft, FaArrowRight, FaChartLine, FaListUl } from 'react-icons/fa';
 import { weeklyFruitData } from '@/lib/weeklyData';
 import WeightChart from '@/components/WeightChart';
@@ -11,6 +12,7 @@ import { useUser } from '@/hooks/useUser';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 
 export default function PregnancyTrackerPage() {
+  const router = useRouter();
   const { user } = useUser();
   const [entries, setEntries] = useState<PregnancyEntry[]>([]);
   const [loading, setLoading] = useState(false);
@@ -25,6 +27,33 @@ export default function PregnancyTrackerPage() {
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
   const [notes, setNotes] = useState<string>('');
   const [message, setMessage] = useState<string | null>(null);
+
+  // Check authentication on component mount
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        // Check if user is authenticated
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+          router.push('/login');
+          return;
+        }
+        
+        // Verify the user with getUser to ensure authentication is valid
+        const { data: { user }, error: userError } = await supabase.auth.getUser();
+        
+        if (userError || !user) {
+          router.push('/login');
+          return;
+        }
+      } catch (error) {
+        console.error('Auth error:', error);
+        router.push('/login');
+      }
+    };
+    
+    checkAuth();
+  }, [router]);
 
   const fetchUserData = useCallback(async () => {
     try {
