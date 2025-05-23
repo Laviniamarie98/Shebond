@@ -71,9 +71,30 @@ export default function Navbar() {
                 <Link href="/baby-milestones" className="text-white hover:bg-amber-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Baby Milestones
                 </Link>
-                <Link href="/weekly-report" className="text-white hover:bg-amber-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Weekly Report
+                <Link href="/blog" className="text-white hover:bg-amber-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Blog
                 </Link>
+                <div className="relative group">
+                  <button className="text-white hover:bg-amber-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                    Policies
+                    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-1">
+                      <Link href="/privacy-policy" className="block px-4 py-2 text-sm text-amber-800 hover:bg-amber-50">
+                        Privacy Policy
+                      </Link>
+                      <Link href="/terms" className="block px-4 py-2 text-sm text-amber-800 hover:bg-amber-50">
+                        Terms of Service
+                      </Link>
+                      <Link href="/data-usage" className="block px-4 py-2 text-sm text-amber-800 hover:bg-amber-50">
+                        Data Usage
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -134,9 +155,23 @@ export default function Navbar() {
           <Link href="/baby-milestones" className="text-white hover:bg-amber-800 block px-3 py-2 rounded-md text-base font-medium">
             Baby Milestones
           </Link>
-          <Link href="/weekly-report" className="text-white hover:bg-amber-800 block px-3 py-2 rounded-md text-base font-medium">
-            Weekly Report
+          <Link href="/blog" className="text-white hover:bg-amber-800 block px-3 py-2 rounded-md text-base font-medium">
+            Blog
           </Link>
+          <div className="px-3 py-2">
+            <div className="text-white font-medium mb-2">Policies</div>
+            <div className="pl-4 space-y-1">
+              <Link href="/privacy-policy" className="block py-1 text-amber-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="block py-1 text-amber-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                Terms of Service
+              </Link>
+              <Link href="/data-usage" className="block py-1 text-amber-100 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                Data Usage
+              </Link>
+            </div>
+          </div>
           {isAuthenticated ? (
             <>
               <div className="px-3 py-2 text-amber-100 text-sm">{userEmail}</div>

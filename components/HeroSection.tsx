@@ -7,9 +7,9 @@ export default function HeroSection() {
   const router = useRouter();
 
   const handleGetStarted = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
+        const { data: { session } } = await supabase.auth.getSession();
     if (session) {
-      router.push('/pregnancy-tracker');
+    router.push('/pregnancy-tracker');
     } else {
       router.push('/login');
     }
